@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+      <h3>Calculating alcohol blood level</h3>
+      <form>
+        <div>
+          <label>Weight</label>
+          <input name="weight" type="number"></input>
+        </div>
+        <div>
+          <label>Bottles</label>
+          <input name="bottles" type="number"></input>
+        </div>
+        <div>
+          <label>Time</label>
+          <input name="time" type="number"></input>
+        </div>
+        <div>
+          <label>Gender</label>
+          <input type="radio" name="gender" value="male" defaultChecked /><label>Male</label>
+          <input type="radio" name="gender" value="female" /><label>Female</label>
+        </div>
+        <div>
+          <output></output>
+        </div>
+        <button>Calculate</button>
+
+
+      </form>
+
+   
+   
+   
+   </>
+  
   );
 }
 
