@@ -11,29 +11,41 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     let alcoholBloodlevel = 0;
-  
-    
+    let litres = bottles * 0.33;
+    let grams = litres * 8 * 4.5;
+    let burning = weight / 10;
+    let gramsLeft = grams - (burning * time);
+
+
     if (gender === 'male') {
-      alcoholBloodlevel = 26.74 / (weight * 0.7)
+      alcoholBloodlevel = gramsLeft / (weight * 0.7);
+    }
+
+    else {
+      alcoholBloodlevel = gramsLeft / (weight * 0.6);
+    }
+
+    if (alcoholBloodlevel < 0) {
+        alcoholBloodlevel = 0;
 
     }
+
     
-    else{
-      alcoholBloodlevel = 26.74 / (weight * 0.6)
-    }
+  
+    
+    
+
+    
     setResult(alcoholBloodlevel);
+
+  
 
 
   }
   
   
-  /*
-litres: bottles * 0.33 = 0.99
-grams: litres * 8 * 4.5 = 35.64
-burning: weight / 10 = 8.9
-grams(left): grams – (burning * time) = 26.74
-result (for male): grams / (weight * 0.7)
-result (for female): grams / (weight * 0.6)   */
+  
+ 
   return (
    <>
       <h3>Calculating alcohol blood level</h3>
