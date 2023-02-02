@@ -15,16 +15,12 @@ function App() {
     let grams = litres * 8 * 4.5;
     let burning = weight / 10;
     let gramsLeft = grams - (burning * time);
-
-
     if (gender === 'male') {
       alcoholBloodlevel = gramsLeft / (weight * 0.7);
     }
-
     else {
       alcoholBloodlevel = gramsLeft / (weight * 0.6);
     }
-
     if (alcoholBloodlevel < 0) {
         alcoholBloodlevel = 0;
 
@@ -33,8 +29,6 @@ function App() {
   }
   
   
-  
- 
   return (
    <>
       <h3>Calculating alcohol blood level</h3>
