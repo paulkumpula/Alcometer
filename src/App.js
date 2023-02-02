@@ -80,14 +80,17 @@ function App() {
         <div>
           <output>{result.toFixed(2)}</output>
         </div>
+        <br>
+        </br>
         <button>Calculate</button>
+        
 
 
       </form>
 
    
    
-   
+      
    </>
   
   );
