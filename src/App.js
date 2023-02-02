@@ -29,18 +29,7 @@ function App() {
         alcoholBloodlevel = 0;
 
     }
-
-    
-  
-    
-    
-
-    
     setResult(alcoholBloodlevel);
-
-  
-
-
   }
   
   
@@ -83,15 +72,8 @@ function App() {
         <br>
         </br>
         <button>Calculate</button>
-        
-
-
       </form>
-
-   
-   
-      
-   </>
+    </>
   
   );
 }
